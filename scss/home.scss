@@ -1,0 +1,164 @@
+.home-container {
+  width: 100%;
+
+  .home-hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 2rem 0;
+    // background-color: red;
+
+    .home-hero-left {
+      width: 50%;
+
+      padding: 1rem;
+
+      h4 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .home-txt {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+    }
+    .home-hero-right {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      span {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+        font-weight: bold;
+        align-self: center;
+        width: 25%;
+      }
+
+      input[type="text"],
+      input[type="number"] {
+        align-self: center;
+        width: 25%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+
+        &:focus {
+          outline: none;
+          border-color: #007bff; /* Change the border color on focus */
+        }
+      }
+
+      #submit {
+        align-self: center;
+        width: 25%;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #0056b3; /* Change the background color on hover */
+        }
+      }
+    }
+  }
+
+  .home-display-data {
+    width: 100%;
+
+    // background-color: plum;
+    .home-location {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1.5rem;
+      background-color: #add8e6;
+      padding: 1rem 0;
+    }
+    .home-current {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1.5rem;
+      padding-top: 1rem;
+      background-color: #add8e6;
+      padding: 1rem 0;
+    }
+    .home-forecast {
+      margin-top: 2rem;
+      #forecast-city-name {
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .home-days {
+        padding: 10px 0;
+
+        .home-day {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+      }
+    }
+  }
+}
+
+// responsiveness
+@media screen and (max-width: 768px) {
+  .home-container {
+    .home-hero-wrapper {
+      display: flex;
+      flex-direction: column;
+      .home-hero-left {
+        text-align: center;
+      }
+
+      .home-hero-right {
+        span {
+          width: 50%;
+          text-align: center;
+        }
+        input[type="text"],
+        input[type="number"] {
+          width: 50%;
+        }
+        #submit {
+          width: 50%;
+        }
+      }
+    }
+    .home-display-data {
+      .home-location {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      .home-current {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      .home-forecast {
+        #forecast-city-name {
+          font-size: 1.3rem;
+        }
+        .home-days {
+          .home-day {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+          }
+        }
+      }
+    }
+  }
+}

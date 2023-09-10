@@ -1,0 +1,30 @@
+.homeNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #add8e6;
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    img {
+      height: 6rem;
+      padding: 1rem;
+    }
+    .nav-logo-txt {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  }
+  .nav-links {
+    padding: 1.2rem;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 0.7rem;
+  }
+  .nav-links a:hover {
+    color: #ff6004;
+  }
+}

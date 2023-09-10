@@ -1,0 +1,24 @@
+// Define variables for footer colors and sizes
+$footer-bg-color: #add8e6;
+$footer-text-color: #000;
+$footer-padding: 20px;
+
+// Footer styles
+footer {
+  background-color: $footer-bg-color;
+  color: $footer-text-color;
+  padding: $footer-padding;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.8rem;
+
+  a {
+    color: $footer-text-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+      color: #ff6004;
+    }
+  }
+}

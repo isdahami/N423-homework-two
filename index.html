@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherAPI</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+    <nav class="homeNav">
+        <div class="nav-logo">
+            <img src="images/weather-logo.png" alt="weather-logo">
+            <div class="nav-logo-txt">WeatherApp</div>
+        </div>
+        <div class="nav-links">
+            <a href="#home">home</a>
+            <a href="#sign-up">sign-up</a>
+            <a href="#login">login</a>
+        </div>
+    </nav>
+
+    <div id="app"></div>
+
+    <footer>
+      &copy; 2023 WeatherApp | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+
+
+  <script src="lib/jquery-3.7.1.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="app/model.js"></script>
+  <script type="module" src="app/app.js"></script>
+</body>
+</html>
