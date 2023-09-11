@@ -6,6 +6,9 @@ $footer-padding: 20px;
 // Footer styles
 footer {
   background-color: $footer-bg-color;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
   color: $footer-text-color;
   padding: $footer-padding;
   text-align: center;
