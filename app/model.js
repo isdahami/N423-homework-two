@@ -26,6 +26,26 @@ function getInfo() {
         let zipInput = $("#zip").val();
         let forecastDays = $("#forecastDays").val();
 
+        // Check if forecastDays is empty or not a valid number
+    if (!forecastDays || isNaN(forecastDays)) {
+        // Set a default value for forecastDays
+        forecastDays = 7;
+    } 
+    // Check if forecastDays is greater than 7
+    if (forecastDays > 7) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Please enter 7 days or less',
+          })
+    } else {
+        Swal.fire(
+            'Success!',
+            'Forecast generated below.',
+            'success'
+          )
+    }
+
         // Check if either cityInput or zipInput is not empty
         if (cityInput !== '' || zipInput !== '') {
             
