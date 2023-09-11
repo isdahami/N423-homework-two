@@ -29,14 +29,14 @@ function getInfo() {
         // Check if forecastDays is empty or not a valid number
     if (!forecastDays || isNaN(forecastDays)) {
         // Set a default value for forecastDays
-        forecastDays = 7;
+        forecastDays = 3;
     } 
     // Check if forecastDays is greater than 7
-    if (forecastDays > 7) {
+    if (forecastDays > 3) {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Please enter 7 days or less',
+            text: 'Please enter 3 days or less',
           })
     } else {
         Swal.fire(
@@ -55,11 +55,11 @@ function getInfo() {
             if (cityInput !== '') {
                 
                 // If a city is provided, construct the city API URL
-                apiUrl = `${baseurl}${apikey}&q=${cityInput}&days=7&aqi=no&alerts=no`;
+                apiUrl = `${baseurl}${apikey}&q=${cityInput}&days=3&aqi=no&alerts=no`;
             } else if (zipInput !== '') {
                 
                 // If a zip code is provided, construct the zip code API URL
-                apiUrl = `${baseurl}${apikey}&q=${zipInput}&days=7&aqi=no&alerts=no`;
+                apiUrl = `${baseurl}${apikey}&q=${zipInput}&days=3&aqi=no&alerts=no`;
             }
 
             // Make an AJAX request to the API and handle the response
@@ -105,7 +105,7 @@ function getInfo() {
                     const dayElement = $(".home-day").eq(i);
                     
                     // Update forecast day information
-                    dayElement.find("#forecastDate").text(data.forecast.forecastday[i].date);
+                    dayElement.find("#forecastDate").text(`Date: ${data.forecast.forecastday[i].date}`);
                     dayElement.find("#avg-temp").text(`Average Temp: ${dayData.avgtemp_c}°C`);
                     dayElement.find("#max-temp").text(`Max Temp: ${dayData.maxtemp_c}°C`);
                     dayElement.find("#low-temp").text(`Low Temp: ${dayData.mintemp_c}°C`);
