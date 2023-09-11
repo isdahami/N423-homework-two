@@ -15,7 +15,7 @@ export function changePage(pageId) {
 function getInfo() {
     // Create constants to retrieve the base URL and API key
     const baseurl = `https://api.weatherapi.com/v1/forecast.json?key=`;
-    const apikey = `958a504c2c94412cb2a204804232808`;
+    const apikey = `4bbfc56e9fb742ef964141426231109`;
 
     // Attach a click event listener to the element with the id "submit"
     $("#submit").on("click", (e) => {
@@ -77,6 +77,18 @@ function getInfo() {
                 const temperature = data.current.temp_c;
                 const iconUrl = data.current.condition.icon;
 
+                // Display basic weather information in the DOM
+                // Location information
+                $('#forecast-city-name').text(`Forecast for the Week: ${forecastCityName}`);
+                $("#city-name").text(cityName);
+                $("#region").text(region);
+                $("#local-time").text(localTime);
+
+                // Current weather information
+                $("#temperature").text(`${temperature}°C`);
+                $("#currentWeather").text(currentWeather);
+                $("#weather-icon").attr("src", iconUrl);
+
                 // Limit the display of forecast days based on user input
                 const numberOfForecastDays = parseInt(forecastDays);
                 const forecastContainer = $("#forecast-container");
@@ -99,19 +111,9 @@ function getInfo() {
                     dayElement.find("#low-temp").text(`Low Temp: ${dayData.mintemp_c}°C`);
                     dayElement.find("#forecast-txt").text(dayData.condition.text);
                     dayElement.find("#forecast-icon").attr("src", dayData.condition.icon);
-                }
+                } 
 
-                // Display basic weather information in the DOM
-                // Location information
-                $('#forecast-city-name').text(`Forecast for the Week: ${forecastCityName}`);
-                $("#city-name").text(cityName);
-                $("#region").text(region);
-                $("#local-time").text(localTime);
-
-                // Current weather information
-                $("#temperature").text(`${temperature}°C`);
-                $("#currentWeather").text(currentWeather);
-                $("#weather-icon").attr("src", iconUrl);
+                
 
             }).fail(function(e) {
                 console.log("error", e);
