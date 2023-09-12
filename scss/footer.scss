@@ -7,7 +7,7 @@ $footer-padding: 20px;
 footer {
   background-color: $footer-bg-color;
   width: 100%;
-  position: absolute;
+  position: sticky;
   bottom: 0;
   color: $footer-text-color;
   padding: $footer-padding;
